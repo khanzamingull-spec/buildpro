@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>BuildPro Services | Construction & Renovation Solutions</title>
+  <meta name="description" content="Explore BuildPro construction, renovation, planning, repair and project enquiry solution categories.">
+  <meta name="keywords" content="construction services, building construction, home renovation, project planning, BuildPro">
+
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="BuildPro">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="BuildPro Services">
+  <meta property="og:description" content="Construction, renovation, planning and project solution categories presented by BuildPro.">
+  <meta property="og:site_name" content="BuildPro">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="BuildPro Services">
+  <meta name="twitter:description" content="Construction and project solution categories presented by BuildPro.">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f7f7;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111827;
+      padding: 18px 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      color: white;
+      text-decoration: none;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .logo span { color: #f59e0b; }
+
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    nav a:hover { color: #f59e0b; }
+
+    .menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 28px;
+    }
+
+    .hero {
+      min-height: 360px;
+      background:
+        linear-gradient(rgba(17,24,39,.82), rgba(17,24,39,.82)),
+        url("images/services/service.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 60px 20px;
+    }
+
+    .hero h1 { font-size: 52px; margin-bottom: 15px; }
+
+    .hero p {
+      max-width: 720px;
+      margin: auto;
+      color: #e5e7eb;
+      font-size: 18px;
+    }
+
+    .section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 80px 50px;
+    }
+
+    .title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .title h2 {
+      font-size: 36px;
+      color: #111827;
+      margin-bottom: 12px;
+    }
+
+    .title p {
+      color: #666;
+      max-width: 750px;
+      margin: auto;
+    }
+
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .service {
+      background: white;
+      padding: 32px;
+      border-radius: 12px;
+      border: 1px solid #e5e7eb;
+    }
+
+    .number {
+      color: #f59e0b;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .service h3 {
+      color: #111827;
+      margin-bottom: 10px;
+      font-size: 22px;
+    }
+
+    .service p {
+      color: #666;
+      font-size: 15px;
+    }
+
+    .notice {
+      margin-top: 40px;
+      padding: 20px;
+      background: #fff7e6;
+      border-left: 5px solid #f59e0b;
+      border-radius: 5px;
+      color: #555;
+    }
+
+    .process {
+      background: #111827;
+      color: white;
+      padding: 75px 50px;
+    }
+
+    .process-inner {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .process h2 {
+      text-align: center;
+      font-size: 36px;
+      margin-bottom: 40px;
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .step {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .step span {
+      width: 55px;
+      height: 55px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto auto 18px;
+      border-radius: 50%;
+      background: #f59e0b;
+      color: #111827;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .step h3 { margin-bottom: 10px; }
+
+    .step p {
+      color: #d1d5db;
+      font-size: 15px;
+    }
+
+    .cta {
+      background: #f59e0b;
+      text-align: center;
+      padding: 60px 30px;
+    }
+
+    .cta h2 {
+      font-size: 34px;
+      margin-bottom: 12px;
+    }
+
+    .cta p { margin-bottom: 20px; }
+
+    .btn {
+      display: inline-block;
+      background: #111827;
+      color: white;
+      padding: 14px 28px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #0b1120;
+      color: #d1d5db;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    footer p {
+      margin: 5px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 850px) {
+      header { padding: 16px 20px; }
+
+      .menu-btn {
+        display: block;
+        cursor: pointer;
+      }
+
+      nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #111827;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        gap: 18px;
+        z-index: 1000;
+      }
+
+      nav.active { display: flex; }
+
+      .hero h1 { font-size: 38px; }
+
+      .section { padding: 60px 20px; }
+
+      .services,
+      .steps {
+        grid-template-columns: 1fr;
+      }
+
+      .process { padding: 60px 20px; }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a href="index.html" class="logo">Build<span>Pro</span></a>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+  <nav id="nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="projects.html">Projects</a>
+    <a href="index.html#reviews">Reviews</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>Our Services</h1>
+    <p>
+      Explore the construction and project solution categories presented
+      through BuildPro.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+
+  <div class="title">
+    <h2>Construction Solutions</h2>
+    <p>
+      These categories describe the types of construction-related solutions
+      BuildPro can present and develop.
+    </p>
+  </div>
+
+  <div class="services">
+
+    <div class="service">
+      <div class="number">01</div>
+      <h3>Building Construction</h3>
+      <p>
+        Construction planning and solution concepts for residential,
+        commercial and other building requirements.
+      </p>
+    </div>
+
+    <div class="service">
+      <div class="number">02</div>
+      <h3>Home Renovation</h3>
+      <p>
+        Ideas and planning support for improving, updating or renovating
+        existing spaces.
+      </p>
+    </div>
+
+    <div class="service">
+      <div class="number">03</div>
+      <h3>Interior Improvements</h3>
+      <p>
+        Practical concepts for improving the layout, appearance and
+        functionality of interior spaces.
+      </p>
+    </div>
+
+    <div class="service">
+      <div class="number">04</div>
+      <h3>Planning & Consultation</h3>
+      <p>
+        A structured way to describe project requirements and organize
+        construction-related discussions.
+      </p>
+    </div>
+
+    <div class="service">
+      <div class="number">05</div>
+      <h3>Repair & Improvement</h3>
+      <p>
+        Construction improvement categories covering repairs, maintenance
+        and practical property upgrades.
+      </p>
+    </div>
+
+    <div class="service">
+      <div class="number">06</div>
+      <h3>Project Enquiries</h3>
+      <p>
+        A simple enquiry process for people who want to discuss a potential
+        construction or renovation requirement.
+      </p>
+    </div>
+
+  </div>
+
+  <div class="notice">
+    <strong>Important:</strong>
+    Specific availability, pricing and project scope should be confirmed
+    through an enquiry before any work is agreed.
+  </div>
+
+</section>
+
+<section class="process">
+
+  <div class="process-inner">
+
+    <h2>Simple Project Process</h2>
+
+    <div class="steps">
+
+      <div class="step">
+        <span>1</span>
+        <h3>Send Enquiry</h3>
+        <p>Share your project requirements through the contact form.</p>
+      </div>
+
+      <div class="step">
+        <span>2</span>
+        <h3>Discuss Requirements</h3>
+        <p>Project details can be reviewed based on the information provided.</p>
+      </div>
+
+      <div class="step">
+        <span>3</span>
+        <h3>Plan Next Steps</h3>
+        <p>Further project details and scope can then be determined.</p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="cta">
+  <h2>Have a Construction Requirement?</h2>
+  <p>Send the details through the BuildPro project enquiry form.</p>
+  <a href="contact.html" class="btn">Start an Enquiry</a>
+</section>
+
+<footer>
+  <p>BuildPro — Construction & Project Solutions</p>
+  <p>Serving customers in Pakistan</p>
+  <p>© 2026 BuildPro. All rights reserved.</p>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("nav").classList.toggle("active");
+  }
+
+  document.querySelectorAll("nav a").forEach(function(link) {
+    link.addEventListener("click", function() {
+      document.getElementById("nav").classList.remove("active");
+    });
+  });
+</script>
+
+</body>
+</html>

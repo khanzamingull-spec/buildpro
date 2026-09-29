@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>BuildPro | Construction & Project Solutions</title>
+  <meta name="description" content="BuildPro is a professional construction platform for building, renovation, planning, project concepts and construction enquiries.">
+  <meta name="keywords" content="construction, building, renovation, construction planning, project solutions, BuildPro, Pakistan">
+
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="BuildPro">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="BuildPro | Construction & Project Solutions">
+  <meta property="og:description" content="Explore construction, renovation, planning and project solutions through BuildPro.">
+  <meta property="og:site_name" content="BuildPro">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="BuildPro | Construction & Project Solutions">
+  <meta name="twitter:description" content="Construction, renovation, planning and project solutions through BuildPro.">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f7f7;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 18px 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      color: white;
+      text-decoration: none;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .logo span {
+      color: #f59e0b;
+    }
+
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    nav a:hover {
+      color: #f59e0b;
+    }
+
+    .menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    .hero {
+      min-height: 620px;
+      background:
+        linear-gradient(rgba(17,24,39,.78), rgba(17,24,39,.78)),
+        url("images/hero/hero.jpg") center/cover no-repeat;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 70px 20px;
+    }
+
+    .hero-content {
+      max-width: 850px;
+    }
+
+    .hero h1 {
+      font-size: 58px;
+      line-height: 1.15;
+      margin-bottom: 20px;
+    }
+
+    .hero h1 span {
+      color: #f59e0b;
+    }
+
+    .hero p {
+      font-size: 19px;
+      color: #e5e7eb;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #f59e0b;
+      color: #111827;
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 6px;
+      font-weight: bold;
+      margin: 5px;
+    }
+
+    .btn.dark {
+      background: #111827;
+      color: white;
+    }
+
+    .btn:hover {
+      opacity: .9;
+    }
+
+    .section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 80px 50px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
+    }
+
+    .section-title h2 {
+      font-size: 36px;
+      color: #111827;
+      margin-bottom: 12px;
+    }
+
+    .section-title p {
+      color: #666;
+      max-width: 750px;
+      margin: auto;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 55px;
+      align-items: center;
+    }
+
+    .about-image img {
+      width: 100%;
+      border-radius: 12px;
+      display: block;
+    }
+
+    .about-content h2 {
+      font-size: 36px;
+      color: #111827;
+      margin-bottom: 18px;
+    }
+
+    .about-content p {
+      color: #666;
+      margin-bottom: 17px;
+    }
+
+    .services-grid,
+    .projects-grid,
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 30px;
+    }
+
+    .card h3 {
+      color: #111827;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      color: #666;
+      font-size: 15px;
+    }
+
+    .project-card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #e5e7eb;
+    }
+
+    .project-card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .project-content {
+      padding: 25px;
+    }
+
+    .project-content h3 {
+      margin-bottom: 10px;
+      color: #111827;
+    }
+
+    .project-content p {
+      color: #666;
+      margin-bottom: 18px;
+      font-size: 15px;
+    }
+
+    .label {
+      color: #f59e0b;
+      font-size: 13px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 7px;
+    }
+
+    .review {
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 12px;
+      padding: 28px;
+    }
+
+    .review p {
+      color: #666;
+      font-style: italic;
+      margin-bottom: 15px;
+    }
+
+    .review strong {
+      color: #111827;
+    }
+
+    .notice {
+      background: #fff7e6;
+      border-left: 5px solid #f59e0b;
+      padding: 20px;
+      margin-bottom: 35px;
+      color: #555;
+      border-radius: 5px;
+    }
+
+    .dark-section {
+      background: #111827;
+      color: white;
+      padding: 75px 50px;
+      text-align: center;
+    }
+
+    .dark-section h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .dark-section p {
+      color: #d1d5db;
+      max-width: 750px;
+      margin: auto;
+    }
+
+    .cta {
+      background: #f59e0b;
+      color: #111827;
+      text-align: center;
+      padding: 60px 30px;
+    }
+
+    .cta h2 {
+      font-size: 34px;
+      margin-bottom: 15px;
+    }
+
+    .cta p {
+      margin-bottom: 20px;
+    }
+
+    footer {
+      background: #0b1120;
+      color: #d1d5db;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    footer p {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+
+    @media (max-width: 850px) {
+      header {
+        padding: 16px 20px;
+      }
+
+      .menu-btn {
+        display: block;
+      }
+
+      nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #111827;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        gap: 18px;
+        z-index: 1000;
+      }
+
+      nav.active {
+        display: flex;
+      }
+
+      .hero {
+        min-height: 520px;
+      }
+
+      .hero h1 {
+        font-size: 42px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .section {
+        padding: 60px 20px;
+      }
+
+      .about-grid,
+      .services-grid,
+      .projects-grid,
+      .review-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .dark-section {
+        padding: 60px 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a href="index.html" class="logo">Build<span>Pro</span></a>
+
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+  <nav id="nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="projects.html">Projects</a>
+    <a href="#reviews">Reviews</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-content">
+    <h1>Build Better with <span>BuildPro</span></h1>
+    <p>
+      A professional construction platform focused on building,
+      renovation, planning and practical project solutions.
+    </p>
+    <a href="services.html" class="btn">Explore Services</a>
+    <a href="contact.html" class="btn dark">Send an Enquiry</a>
+  </div>
+</section>
+
+<section class="section">
+
+  <div class="about-grid">
+
+    <div class="about-image">
+      <img src="images/about/about.jpg" alt="Construction planning and building concept">
+    </div>
+
+    <div class="about-content">
+      <h2>About BuildPro</h2>
+
+      <p>
+        BuildPro is being developed as a professional construction platform
+        for presenting building, renovation, planning and project solutions.
+      </p>
+
+      <p>
+        The website is designed to make construction-related information
+        easier to explore and to provide a straightforward project enquiry
+        process.
+      </p>
+
+      <a href="about.html" class="btn dark">Learn More</a>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="section">
+
+  <div class="section-title">
+    <h2>Construction Solutions</h2>
+    <p>
+      Explore the main construction and project solution categories presented
+      through BuildPro.
+    </p>
+  </div>
+
+  <div class="services-grid">
+
+    <div class="card">
+      <h3>Building Construction</h3>
+      <p>Construction planning and solution concepts for building projects.</p>
+    </div>
+
+    <div class="card">
+      <h3>Home Renovation</h3>
+      <p>Ideas and planning support for improving existing properties.</p>
+    </div>
+
+    <div class="card">
+      <h3>Planning & Consultation</h3>
+      <p>Organized project discussions based on individual requirements.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="section">
+
+  <div class="section-title">
+    <h2>Project Concepts</h2>
+    <p>
+      A visual showcase of construction and renovation concepts.
+    </p>
+  </div>
+
+  <div class="notice">
+    <strong>Showcase Notice:</strong>
+    These are concept examples and are not presented as verified completed
+    BuildPro projects.
+  </div>
+
+  <div class="projects-grid">
+
+    <div class="project-card">
+      <img src="images/projects/project1.jpg" alt="Modern residential construction concept">
+      <div class="project-content">
+        <div class="label">Project Concept</div>
+        <h3>Modern Residence</h3>
+        <p>A modern residential construction concept.</p>
+        <a href="project-details.html" class="btn dark">View Details</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="images/projects/project2.jpg" alt="Commercial building construction concept">
+      <div class="project-content">
+        <div class="label">Project Concept</div>
+        <h3>Commercial Building</h3>
+        <p>A practical commercial construction concept.</p>
+        <a href="project-details.html" class="btn dark">View Details</a>
+      </div>
+    </div>
+
+    <div class="project-card">
+      <img src="images/projects/project3.jpg" alt="Home renovation concept">
+      <div class="project-content">
+        <div class="label">Project Concept</div>
+        <h3>Home Renovation</h3>
+        <p>A residential renovation and improvement concept.</p>
+        <a href="project-details.html" class="btn dark">View Details</a>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="text-align:center; margin-top:35px;">
+    <a href="projects.html" class="btn dark">View All Concepts</a>
+  </div>
+
+</section>
+
+<section class="dark-section">
+  <h2>Why BuildPro?</h2>
+  <p>
+    BuildPro focuses on clear information, practical construction concepts
+    and a simple way for visitors to communicate their project requirements.
+  </p>
+</section>
+
+<section class="section" id="reviews">
+
+  <div class="section-title">
+    <h2>Example Testimonials</h2>
+    <p>
+      These are placeholder testimonials for website design purposes.
+      Genuine customer feedback should replace them before launch.
+    </p>
+  </div>
+
+  <div class="review-grid">
+
+    <div class="review">
+      <p>
+        “This is an example testimonial and should be replaced with genuine
+        customer feedback.”
+      </p>
+      <strong>Example Customer</strong>
+    </div>
+
+    <div class="review">
+      <p>
+        “This is placeholder content showing how customer feedback can appear.”
+      </p>
+      <strong>Example Customer</strong>
+    </div>
+
+    <div class="review">
+      <p>
+        “Real verified feedback can be added here when it becomes available.”
+      </p>
+      <strong>Example Customer</strong>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="cta">
+  <h2>Have a Project in Mind?</h2>
+  <p>Send your construction or renovation requirements through BuildPro.</p>
+  <a href="contact.html" class="btn dark">Send an Enquiry</a>
+</section>
+
+<footer>
+  <p>BuildPro — Construction & Project Solutions</p>
+  <p>Serving customers in Pakistan</p>
+  <p>© 2026 BuildPro. All rights reserved.</p>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("nav").classList.toggle("active");
+  }
+
+  document.querySelectorAll("nav a").forEach(function(link) {
+    link.addEventListener("click", function() {
+      document.getElementById("nav").classList.remove("active");
+    });
+  });
+</script>
+
+</body>
+</html>

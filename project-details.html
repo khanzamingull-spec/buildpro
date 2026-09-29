@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Modern Residence Concept | BuildPro</title>
+  <meta name="description" content="Explore a BuildPro modern residence construction concept and see how project information can be presented.">
+  <meta name="keywords" content="modern residence, construction concept, residential construction, BuildPro">
+
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="BuildPro">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Modern Residence Concept | BuildPro">
+  <meta property="og:description" content="A modern residential construction concept presented through BuildPro.">
+  <meta property="og:site_name" content="BuildPro">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Modern Residence Concept | BuildPro">
+  <meta name="twitter:description" content="A modern residential construction concept presented through BuildPro.">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f7f7;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111827;
+      padding: 18px 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      color: white;
+      text-decoration: none;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .logo span { color: #f59e0b; }
+
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    nav a:hover { color: #f59e0b; }
+
+    .menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 28px;
+    }
+
+    .hero {
+      min-height: 360px;
+      background:
+        linear-gradient(rgba(17,24,39,.84), rgba(17,24,39,.84)),
+        url("images/projects/project1.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 60px 20px;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      margin-bottom: 12px;
+    }
+
+    .hero p {
+      color: #f59e0b;
+      font-weight: bold;
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 80px 50px;
+    }
+
+    .notice {
+      background: #fff7e6;
+      border-left: 5px solid #f59e0b;
+      padding: 22px;
+      border-radius: 5px;
+      margin-bottom: 45px;
+      color: #555;
+    }
+
+    .main {
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      gap: 50px;
+      align-items: start;
+    }
+
+    .main img {
+      width: 100%;
+      border-radius: 12px;
+      display: block;
+    }
+
+    .content h2 {
+      font-size: 34px;
+      color: #111827;
+      margin-bottom: 18px;
+    }
+
+    .content p {
+      color: #666;
+      margin-bottom: 18px;
+    }
+
+    .details {
+      margin-top: 30px;
+      background: white;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      padding: 15px 18px;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    .row:last-child { border-bottom: none; }
+
+    .row strong { color: #111827; }
+    .row span { color: #666; }
+
+    .back {
+      display: inline-block;
+      margin-top: 20px;
+      color: #111827;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .back:hover { color: #f59e0b; }
+
+    .steps {
+      background: #111827;
+      color: white;
+      padding: 75px 50px;
+    }
+
+    .steps-inner {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .steps h2 {
+      text-align: center;
+      font-size: 34px;
+      margin-bottom: 40px;
+    }
+
+    .step-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px;
+    }
+
+    .step {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .number {
+      width: 55px;
+      height: 55px;
+      border-radius: 50%;
+      background: #f59e0b;
+      color: #111827;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: auto auto 18px;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .step h3 { margin-bottom: 10px; }
+
+    .step p {
+      color: #d1d5db;
+      font-size: 15px;
+    }
+
+    .cta {
+      background: #f59e0b;
+      text-align: center;
+      padding: 60px 30px;
+    }
+
+    .cta h2 {
+      font-size: 34px;
+      margin-bottom: 12px;
+    }
+
+    .cta p { margin-bottom: 20px; }
+
+    .btn {
+      display: inline-block;
+      background: #111827;
+      color: white;
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #0b1120;
+      color: #d1d5db;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    footer p {
+      margin: 5px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 850px) {
+      header { padding: 16px 20px; }
+
+      .menu-btn {
+        display: block;
+        cursor: pointer;
+      }
+
+      nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #111827;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        gap: 18px;
+        z-index: 1000;
+      }
+
+      nav.active { display: flex; }
+
+      .hero h1 { font-size: 36px; }
+
+      .section { padding: 60px 20px; }
+
+      .main,
+      .step-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .steps { padding: 60px 20px; }
+
+      .row {
+        grid-template-columns: 1fr;
+        gap: 5px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a href="index.html" class="logo">Build<span>Pro</span></a>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+  <nav id="nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="projects.html">Projects</a>
+    <a href="index.html#reviews">Reviews</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>Modern Residence</h1>
+    <p>PROJECT CONCEPT</p>
+  </div>
+</section>
+
+<section class="section">
+
+  <div class="notice">
+    <strong>Showcase Content:</strong>
+    This page demonstrates how a BuildPro project could be presented.
+    The information shown here is a project concept and is not a claim of a
+    verified completed BuildPro project.
+  </div>
+
+  <div class="main">
+
+    <div>
+      <img src="images/projects/project1.jpg" alt="Modern residence construction concept">
+    </div>
+
+    <div class="content">
+
+      <h2>Modern Residential Concept</h2>
+
+      <p>
+        This concept represents a modern residential construction idea with
+        an emphasis on practical space, clean design and comfortable living.
+      </p>
+
+      <p>
+        A real project page can later include verified information such as
+        project location, project scope, materials, completion date and
+        genuine project photographs.
+      </p>
+
+      <div class="details">
+
+        <div class="row">
+          <strong>Category</strong>
+          <span>Residential Construction</span>
+        </div>
+
+        <div class="row">
+          <strong>Status</strong>
+          <span>Concept / Showcase</span>
+        </div>
+
+        <div class="row">
+          <strong>Scope</strong>
+          <span>Building and planning concept</span>
+        </div>
+
+        <div class="row">
+          <strong>Information</strong>
+          <span>Example content for website presentation</span>
+        </div>
+
+      </div>
+
+      <a href="projects.html" class="back">← Back to Project Concepts</a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="steps">
+
+  <div class="steps-inner">
+
+    <h2>How a Real Project Could Be Presented</h2>
+
+    <div class="step-grid">
+
+      <div class="step">
+        <div class="number">1</div>
+        <h3>Requirements</h3>
+        <p>
+          Collect the project's requirements, goals, location and expected scope.
+        </p>
+      </div>
+
+      <div class="step">
+        <div class="number">2</div>
+        <h3>Planning</h3>
+        <p>
+          Organize the project information and determine practical requirements.
+        </p>
+      </div>
+
+      <div class="step">
+        <div class="number">3</div>
+        <h3>Development</h3>
+        <p>
+          Move forward according to the confirmed project scope and requirements.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<section class="cta">
+  <h2>Discuss Your Project</h2>
+  <p>Share your construction or renovation requirements through BuildPro.</p>
+  <a href="contact.html" class="btn">Send an Enquiry</a>
+</section>
+
+<footer>
+  <p>BuildPro — Construction & Project Solutions</p>
+  <p>Serving customers in Pakistan</p>
+  <p>© 2026 BuildPro. All rights reserved.</p>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("nav").classList.toggle("active");
+  }
+
+  document.querySelectorAll("nav a").forEach(function(link) {
+    link.addEventListener("click", function() {
+      document.getElementById("nav").classList.remove("active");
+    });
+  });
+</script>
+
+</body>
+</html>

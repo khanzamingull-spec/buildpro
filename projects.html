@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>BuildPro Project Concepts | Construction Portfolio</title>
+  <meta name="description" content="Explore BuildPro construction project concepts covering residential, commercial, renovation and modern building ideas.">
+  <meta name="keywords" content="construction projects, building projects, renovation projects, project concepts, BuildPro">
+
+  <meta name="robots" content="index, follow">
+  <meta name="author" content="BuildPro">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="BuildPro Project Concepts">
+  <meta property="og:description" content="Explore construction and renovation project concepts presented through BuildPro.">
+  <meta property="og:site_name" content="BuildPro">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="BuildPro Project Concepts">
+  <meta name="twitter:description" content="Construction and renovation project concepts presented through BuildPro.">
+
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f7f7;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    header {
+      background: #111827;
+      padding: 18px 50px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      color: white;
+      text-decoration: none;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    .logo span { color: #f59e0b; }
+
+    nav {
+      display: flex;
+      gap: 25px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    nav a:hover { color: #f59e0b; }
+
+    .menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 28px;
+    }
+
+    .hero {
+      min-height: 360px;
+      background:
+        linear-gradient(rgba(17,24,39,.84), rgba(17,24,39,.84)),
+        url("images/projects/project1.jpg") center/cover no-repeat;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: white;
+      padding: 60px 20px;
+    }
+
+    .hero h1 { font-size: 52px; margin-bottom: 15px; }
+
+    .hero p {
+      max-width: 720px;
+      margin: auto;
+      color: #e5e7eb;
+      font-size: 18px;
+    }
+
+    .section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 80px 50px;
+    }
+
+    .intro {
+      text-align: center;
+      max-width: 800px;
+      margin: auto auto 45px;
+    }
+
+    .intro h2 {
+      font-size: 36px;
+      color: #111827;
+      margin-bottom: 15px;
+    }
+
+    .intro p { color: #666; }
+
+    .notice {
+      background: #fff7e6;
+      border-left: 5px solid #f59e0b;
+      padding: 20px;
+      border-radius: 5px;
+      color: #555;
+      margin-bottom: 45px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+    }
+
+    .project {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #e5e7eb;
+    }
+
+    .project img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .content {
+      padding: 25px;
+    }
+
+    .label {
+      color: #f59e0b;
+      font-size: 13px;
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+
+    .content h3 {
+      color: #111827;
+      font-size: 22px;
+      margin-bottom: 10px;
+    }
+
+    .content p {
+      color: #666;
+      font-size: 15px;
+      margin-bottom: 18px;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #111827;
+      color: white;
+      text-decoration: none;
+      padding: 11px 20px;
+      border-radius: 6px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .btn:hover {
+      background: #f59e0b;
+      color: #111827;
+    }
+
+    .cta {
+      background: #f59e0b;
+      color: #111827;
+      text-align: center;
+      padding: 60px 30px;
+    }
+
+    .cta h2 {
+      font-size: 34px;
+      margin-bottom: 12px;
+    }
+
+    .cta p { margin-bottom: 20px; }
+
+    footer {
+      background: #0b1120;
+      color: #d1d5db;
+      text-align: center;
+      padding: 30px 20px;
+    }
+
+    footer p {
+      margin: 5px;
+      font-size: 14px;
+    }
+
+    @media (max-width: 850px) {
+      header { padding: 16px 20px; }
+
+      .menu-btn {
+        display: block;
+        cursor: pointer;
+      }
+
+      nav {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        width: 100%;
+        background: #111827;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+        gap: 18px;
+        z-index: 1000;
+      }
+
+      nav.active { display: flex; }
+
+      .hero h1 { font-size: 38px; }
+
+      .section { padding: 60px 20px; }
+
+      .projects {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <a href="index.html" class="logo">Build<span>Pro</span></a>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+  <nav id="nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="projects.html">Projects</a>
+    <a href="index.html#reviews">Reviews</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div>
+    <h1>Project Concepts</h1>
+    <p>
+      A visual collection of construction and renovation concepts presented
+      through the BuildPro website.
+    </p>
+  </div>
+</section>
+
+<section class="section">
+
+  <div class="intro">
+    <h2>Explore Project Ideas</h2>
+    <p>
+      These examples demonstrate different types of construction and
+      renovation projects that can be presented through BuildPro.
+    </p>
+  </div>
+
+  <div class="notice">
+    <strong>Showcase Notice:</strong>
+    The projects below are concept and showcase content. They are not
+    presented as verified completed BuildPro projects.
+  </div>
+
+  <div class="projects">
+
+    <div class="project">
+      <img src="images/projects/project1.jpg" alt="Modern residential construction concept">
+      <div class="content">
+        <div class="label">Project Concept</div>
+        <h3>Modern Residence</h3>
+        <p>A modern residential building concept focused on practical layout and functionality.</p>
+        <a href="project-details.html" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <img src="images/projects/project2.jpg" alt="Commercial building construction concept">
+      <div class="content">
+        <div class="label">Project Concept</div>
+        <h3>Commercial Building</h3>
+        <p>A commercial construction concept focused on useful space and professional design.</p>
+        <a href="project-details.html" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <img src="images/projects/project3.jpg" alt="Home renovation concept">
+      <div class="content">
+        <div class="label">Project Concept</div>
+        <h3>Home Renovation</h3>
+        <p>A renovation concept showing practical property improvement ideas.</p>
+        <a href="project-details.html" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <img src="images/projects/project4.jpg" alt="Contemporary building construction concept">
+      <div class="content">
+        <div class="label">Project Concept</div>
+        <h3>Contemporary Building</h3>
+        <p>A contemporary construction idea combining practical use of space with clean design.</p>
+        <a href="project-details.html" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <img src="images/projects/project5.jpg" alt="Interior improvement concept">
+      <div class="content">
+        <div class="label">Project Concept</div>
+        <h3>Interior Improvement</h3>
+        <p>An interior improvement concept focused on organization and functionality.</p>
+        <a href="project-details.html" class="btn">View Details</a>
+      </div>
+    </div>
+
+    <div class="project">
+      <img src="images/projects/project6.jpg" alt="Large-scale construction concept">
+      <div class="content">
+        <div class="label">Project Concept</div>
+        <h3>Large-Scale Construction</h3>
+        <p>A larger construction concept showing organized project development.</p>
+        <a href="project-details.html" class="btn">View Details</a>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+
+<section class="cta">
+  <h2>Have Your Own Project Idea?</h2>
+  <p>Share your requirements through the BuildPro project enquiry form.</p>
+  <a href="contact.html" class="btn">Send an Enquiry</a>
+</section>
+
+<footer>
+  <p>BuildPro — Construction & Project Solutions</p>
+  <p>Serving customers in Pakistan</p>
+  <p>© 2026 BuildPro. All rights reserved.</p>
+</footer>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("nav").classList.toggle("active");
+  }
+
+  document.querySelectorAll("nav a").forEach(function(link) {
+    link.addEventListener("click", function() {
+      document.getElementById("nav").classList.remove("active");
+    });
+  });
+</script>
+
+</body>
+</html>

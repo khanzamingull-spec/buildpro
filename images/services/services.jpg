@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>BuildPro | Project Details</title>
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,sans-serif;
+    background:#f7f7f7;
+    color:#222;
+    line-height:1.6;
+}
+
+/* HEADER */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+
+    background:#111827;
+    color:white;
+
+    padding:18px 6%;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:28px;
+    font-weight:bold;
+}
+
+.logo span{
+    color:#f59e0b;
+}
+
+nav{
+    display:flex;
+    gap:28px;
+    align-items:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    font-size:15px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+nav a:hover{
+    color:#f59e0b;
+}
+
+.menu-btn{
+    display:none;
+    font-size:28px;
+    cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+    min-height:400px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    text-align:center;
+
+    padding:80px 6%;
+
+    color:white;
+
+    background:
+        linear-gradient(
+            rgba(17,24,39,0.76),
+            rgba(17,24,39,0.76)
+        ),
+        url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1800&q=80");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-content{
+    max-width:850px;
+}
+
+.hero small{
+    display:block;
+    color:#f59e0b;
+    font-weight:bold;
+    margin-bottom:12px;
+    letter-spacing:1px;
+    text-transform:uppercase;
+}
+
+.hero h1{
+    font-size:52px;
+    margin-bottom:15px;
+}
+
+.hero p{
+    color:#e5e7eb;
+    font-size:18px;
+}
+
+/* PROJECT */
+
+.project-section{
+    padding:85px 6%;
+}
+
+.project-container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.project-grid{
+    display:grid;
+    grid-template-columns:1.15fr 0.85fr;
+    gap:55px;
+    align-items:start;
+}
+
+.project-image img{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+    border-radius:16px;
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.12);
+}
+
+.project-info{
+    background:white;
+    padding:35px;
+    border-radius:16px;
+
+    box-shadow:
+        0 8px 25px rgba(0,0,0,0.07);
+}
+
+.project-info h2{
+    font-size:34px;
+    color:#111827;
+    margin-bottom:15px;
+}
+
+.project-info > p{
+    color:#6b7280;
+    margin-bottom:25px;
+}
+
+.details{
+    border-top:1px solid #eee;
+    padding-top:20px;
+}
+
+.detail-row{
+    display:flex;
+    justify-content:space-between;
+    gap:20px;
+
+    padding:13px 0;
+
+    border-bottom:1px solid #eee;
+}
+
+.detail-row strong{
+    color:#111827;
+}
+
+.detail-row span{
+    color:#6b7280;
+    text-align:right;
+}
+
+/* CONTENT */
+
+.content-section{
+    background:white;
+    padding:80px 6%;
+}
+
+.content-container{
+    max-width:1000px;
+    margin:auto;
+}
+
+.content-container h2{
+    font-size:34px;
+    color:#111827;
+    margin-bottom:18px;
+}
+
+.content-container p{
+    color:#6b7280;
+    margin-bottom:20px;
+}
+
+.content-list{
+    list-style:none;
+    margin:25px 0 35px;
+}
+
+.content-list li{
+    margin-bottom:12px;
+    font-weight:600;
+}
+
+.content-list li::before{
+    content:"✓";
+    color:#f59e0b;
+    margin-right:10px;
+}
+
+/* BUTTON */
+
+.btn{
+    display:inline-block;
+
+    padding:14px 24px;
+
+    border-radius:8px;
+
+    text-decoration:none;
+
+    font-weight:bold;
+
+    transition:0.3s;
+}
+
+.btn-primary{
+    background:#f59e0b;
+    color:#111827;
+}
+
+.btn-primary:hover{
+    background:#d97706;
+    color:white;
+}
+
+.btn-dark{
+    background:#111827;
+    color:white;
+    margin-left:10px;
+}
+
+.btn-dark:hover{
+    background:#1f2937;
+}
+
+/* CTA */
+
+.cta{
+    background:#111827;
+    color:white;
+    text-align:center;
+
+    padding:80px 6%;
+}
+
+.cta h2{
+    font-size:38px;
+    margin-bottom:15px;
+}
+
+.cta p{
+    max-width:650px;
+    margin:0 auto 28px;
+    color:#d1d5db;
+}
+
+/* FOOTER */
+
+footer{
+    background:#0b1120;
+    color:#d1d5db;
+
+    padding:60px 6% 25px;
+}
+
+.footer-grid{
+    max-width:1200px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr 1.5fr;
+    gap:45px;
+}
+
+.footer-col h3{
+    color:white;
+    margin-bottom:18px;
+    font-size:19px;
+}
+
+.footer-logo{
+    font-size:28px;
+    font-weight:bold;
+    color:white;
+    margin-bottom:15px;
+}
+
+.footer-logo span{
+    color:#f59e0b;
+}
+
+.footer-col p{
+    color:#9ca3af;
+    font-size:14px;
+    margin-bottom:10px;
+}
+
+.footer-col ul{
+    list-style:none;
+}
+
+.footer-col li{
+    margin-bottom:10px;
+}
+
+.footer-col a{
+    color:#9ca3af;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.footer-col a:hover{
+    color:#f59e0b;
+}
+
+.footer-bottom{
+    max-width:1200px;
+    margin:45px auto 0;
+
+    padding-top:20px;
+
+    border-top:1px solid #1f2937;
+
+    text-align:center;
+
+    color:#6b7280;
+
+    font-size:13px;
+}
+
+/* WHATSAPP */
+
+.floating-whatsapp{
+    position:fixed;
+    right:22px;
+    bottom:22px;
+    z-index:9999;
+
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+    background:#25D366;
+    color:white;
+
+    text-decoration:none;
+
+    padding:13px 18px;
+
+    border-radius:50px;
+
+    font-size:15px;
+    font-weight:bold;
+
+    box-shadow:
+        0 6px 20px rgba(0,0,0,0.20);
+
+    transition:0.3s;
+}
+
+.floating-whatsapp:hover{
+    transform:translateY(-3px);
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .project-grid{
+        grid-template-columns:1fr;
+    }
+
+    .footer-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+}
+
+@media(max-width:700px){
+
+    header{
+        padding:16px 5%;
+    }
+
+    .menu-btn{
+        display:block;
+    }
+
+    nav{
+        display:none;
+
+        position:absolute;
+
+        top:70px;
+        left:0;
+        right:0;
+
+        background:#111827;
+
+        flex-direction:column;
+
+        gap:0;
+
+        padding:10px 0;
+    }
+
+    nav.show{
+        display:flex;
+    }
+
+    nav a{
+        width:100%;
+        text-align:center;
+        padding:15px;
+    }
+
+    .hero{
+        min-height:350px;
+        padding:70px 5%;
+    }
+
+    .hero h1{
+        font-size:38px;
+    }
+
+    .project-section,
+    .content-section{
+        padding:60px 5%;
+    }
+
+    .project-image img{
+        height:300px;
+    }
+
+    .project-info{
+        padding:25px;
+    }
+
+    .project-info h2{
+        font-size:29px;
+    }
+
+    .detail-row{
+        flex-direction:column;
+        gap:3px;
+    }
+
+    .detail-row span{
+        text-align:left;
+    }
+
+    .btn-dark{
+        margin-left:0;
+        margin-top:10px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+        gap:30px;
+    }
+
+    .floating-whatsapp{
+        right:15px;
+        bottom:15px;
+        padding:12px 15px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<!-- HEADER -->
+
+<header>
+
+    <div class="logo">
+        Build<span>Pro</span>
+    </div>
+
+    <div
+        class="menu-btn"
+        onclick="toggleMenu()"
+    >
+        ☰
+    </div>
+
+    <nav id="navMenu">
+
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="about.html">
+            About
+        </a>
+
+        <a href="services.html">
+            Services
+        </a>
+
+        <a href="projects.html">
+            Projects
+        </a>
+
+        <a href="index.html#reviews">
+            Reviews
+        </a>
+
+        <a href="contact.html">
+            Contact
+        </a>
+
+    </nav>
+
+</header>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <small>
+            BuildPro Projects
+        </small>
+
+        <h1>
+            Modern Family Home
+        </h1>
+
+        <p>
+            A professional residential construction project
+            focused on practical design and quality execution.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- PROJECT DETAILS -->
+
+<section class="project-section">
+
+    <div class="project-container">
+
+        <div class="project-grid">
+
+
+            <div class="project-image">
+
+                <img
+                    src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1400&q=80"
+                    alt="Modern family home project"
+                >
+
+            </div>
+
+
+            <div class="project-info">
+
+                <h2>
+                    Modern Family Home
+                </h2>
+
+                <p>
+                    This demo project represents a modern residential
+                    construction concept designed around comfort,
+                    functionality, and clean architectural details.
+                </p>
+
+
+                <div class="details">
+
+
+                    <div class="detail-row">
+
+                        <strong>
+                            Project Type
+                        </strong>
+
+                        <span>
+                            Residential
+                        </span>
+
+                    </div>
+
+
+                    <div class="detail-row">
+
+                        <strong>
+                            Location
+                        </strong>
+
+                        <span>
+                            Pakistan
+                        </span>
+
+                    </div>
+
+
+                    <div class="detail-row">
+
+                        <strong>
+                            Service
+                        </strong>
+
+                        <span>
+                            Home Construction
+                        </span>
+
+                    </div>
+
+
+                    <div class="detail-row">
+
+                        <strong>
+                            Status
+                        </strong>
+
+                        <span>
+                            Demo Project
+                        </span>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROJECT INFORMATION -->
+
+<section class="content-section">
+
+    <div class="content-container">
+
+        <h2>
+            About This Project
+        </h2>
+
+        <p>
+            The Modern Family Home is a demonstration project
+            created for the BuildPro website. It shows how a
+            completed project can be presented to potential clients.
+        </p>
+
+        <p>
+            When real BuildPro projects are added, this section
+            can contain the actual project story, construction
+            requirements, materials, timeline, and completed work.
+        </p>
+
+
+        <h2>
+            Services Included
+        </h2>
+
+        <ul class="content-list">
+
+            <li>
+                Project planning and coordination
+            </li>
+
+            <li>
+                Residential construction
+            </li>
+
+            <li>
+                Structural and finishing work
+            </li>
+
+            <li>
+                Quality monitoring
+            </li>
+
+            <li>
+                Final project completion
+            </li>
+
+        </ul>
+
+
+        <a
+            href="contact.html"
+            class="btn btn-primary"
+        >
+            Discuss Your Project
+        </a>
+
+        <a
+            href="projects.html"
+            class="btn btn-dark"
+        >
+            Back To Projects
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- CTA -->
+
+<section class="cta">
+
+    <h2>
+        Have A Similar Project In Mind?
+    </h2>
+
+    <p>
+        Contact BuildPro to discuss your construction,
+        renovation, or design requirements.
+    </p>
+
+    <a
+        href="contact.html"
+        class="btn btn-primary"
+    >
+        Get a Free Quote
+    </a>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    <div class="footer-grid">
+
+
+        <div class="footer-col">
+
+            <div class="footer-logo">
+                Build<span>Pro</span>
+            </div>
+
+            <p>
+                Professional construction, renovation,
+                and design solutions focused on quality,
+                planning, and reliable service.
+            </p>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <ul>
+
+                <li>
+                    <a href="index.html">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="about.html">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="services.html">
+                        Services
+                    </a>
+                </li>
+
+                <li>
+                    <a href="projects.html">
+                        Projects
+                    </a>
+                </li>
+
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h3>
+                Services
+            </h3>
+
+            <ul>
+
+                <li>
+                    <a href="services.html">
+                        Home Construction
+                    </a>
+                </li>
+
+                <li>
+                    <a href="services.html">
+                        Commercial Construction
+                    </a>
+                </li>
+
+                <li>
+                    <a href="services.html">
+                        Renovation
+                    </a>
+                </li>
+
+                <li>
+                    <a href="services.html">
+                        Interior Design
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+
+        <div class="footer-col">
+
+            <h3>
+                Contact
+            </h3>
+
+            <p>
+                BuildPro Office, Pakistan
+            </p>
+
+            <p>
+                <a href="tel:+923001234567">
+                    +92 300 1234567
+                </a>
+            </p>
+
+            <p>
+                <a href="mailto:info@buildpro.com">
+                    info@buildpro.com
+                </a>
+            </p>
+
+            <p>
+                Monday - Saturday<br>
+                9:00 AM - 6:00 PM
+            </p>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="footer-bottom">
+
+        © 2026 BuildPro. All Rights Reserved.
+
+    </div>
+
+</footer>
+
+
+<!-- WHATSAPP -->
+
+<a
+    href="https://wa.me/923001234567?text=Assalam%20o%20Alaikum%20BuildPro%2C%20I%20would%20like%20to%20discuss%20a%20project."
+    class="floating-whatsapp"
+    target="_blank"
+    aria-label="Contact BuildPro on WhatsApp"
+>
+    WhatsApp 💬
+</a>
+
+
+<script>
+
+function toggleMenu(){
+
+    const menu =
+        document.getElementById("navMenu");
+
+    menu.classList.toggle("show");
+
+}
+
+</script>
+
+
+</body>
+
+</html>

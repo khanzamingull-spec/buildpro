@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 150">
+  <rect width="500" height="150" rx="18" fill="#111827"/>
+
+  <g transform="translate(25 25)">
+    <path d="M0 55 L45 15 L90 55 L90 100 L0 100 Z"
+          fill="none"
+          stroke="#f59e0b"
+          stroke-width="8"
+          stroke-linejoin="round"/>
+
+    <path d="M45 15 L45 100"
+          stroke="#f59e0b"
+          stroke-width="8"/>
+
+    <path d="M10 65 L80 65"
+          stroke="#f59e0b"
+          stroke-width="8"/>
+
+    <path d="M18 48 L45 25 L72 48"
+          fill="none"
+          stroke="#ffffff"
+          stroke-width="6"
+          stroke-linejoin="round"/>
+  </g>
+
+  <text x="135" y="78"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="48"
+        font-weight="700"
+        fill="#ffffff">
+    Build
+  </text>
+
+  <text x="270" y="78"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="48"
+        font-weight="700"
+        fill="#f59e0b">
+    Pro
+  </text>
+
+  <text x="138" y="108"
+        font-family="Arial, Helvetica, sans-serif"
+        font-size="16"
+        letter-spacing="3"
+        fill="#d1d5db">
+    BUILD • RENOVATE • IMPROVE
+  </text>
+</svg>
